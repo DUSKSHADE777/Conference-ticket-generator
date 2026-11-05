@@ -1,0 +1,457 @@
+:root {
+    --Neutral-0: hsl(0, 0%, 100%);
+    --Neutral-300: hsl(252, 6%, 83%);
+    --Neutral-500: hsl(245, 15%, 58%);
+    --Neutral-700: hsl(245, 19%, 35%);
+    --Neutral-900: hsl(248, 70%, 10%);
+    --Orange-500: hsl(7, 88%, 67%);
+    --Orange-700: hsl(7, 71%, 60%);
+    --Gradient-text: hsl(7, 86%, 67%);
+}
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("./assets/images/background-desktop.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    color: var(--Neutral-0);
+}
+
+.pattern_lines,
+.pattern_circle1,
+.pattern_circle2,
+.squiggly_line_bottom_desktop,
+.squiggly_line_top,
+.line_bottom_mobile {
+    position: absolute;
+    z-index: 1;
+
+}
+
+.pattern_lines {
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pattern_circle1 {
+    top: 50%;
+    right: 10%;
+}
+
+.pattern_circle2 {
+    top: -10%;
+    left: 10%;
+}
+
+.squiggly_line_top {
+    top: 0;
+    right: 0;
+
+}
+
+.squiggly_line_bottom_desktop,
+.line_bottom_mobile {
+    bottom: 0;
+    left: 0;
+
+}
+
+.line_bottom_mobile {
+    display: none;
+}
+
+header,
+main {
+    width: 35%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+pre {
+    white-space: normal;
+    color: var(--Neutral-500);
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    margin-block: 0.1rem;
+    width: 70%;
+}
+
+h1 {
+    text-align: center;
+    margin-block: 0.1rem;
+
+}
+
+input {
+    background-color: var(--Neutral-900);
+    border-radius: 0.8rem;
+    padding: 0.6rem;
+    color: var(--Neutral-0);
+    width: 80%;
+    border: solid 0.1rem var(--Neutral-500);
+}
+
+input:focus {
+    outline: solid 0.1rem var(--Neutral-500);
+    box-shadow: 0 0 0 0.2rem var(--Neutral-900), 0 0 0 0.3rem var(--Neutral-500);
+}
+
+input:hover {
+    background-color: var(--Neutral-700);
+}
+
+p {
+    margin-inline-end: auto;
+    padding-inline-start: 10%;
+    margin-block: 0.1rem;
+    font-size: large;
+}
+
+input::placeholder {
+    color: var(--Neutral-500);
+    text-align: left;
+}
+
+.main-button {
+    background-color: var(--Orange-500);
+    border-radius: 0.8rem;
+    padding: 0.8rem;
+    color: var(--Neutral-900);
+    font-weight: bold;
+    width: 80%;
+    margin-block: 1rem;
+    border: none;
+}
+
+.main-button:hover {
+    background-color: var(--Orange-700);
+}
+
+label {
+    margin-inline-end: auto;
+    padding-inline-start: 10%;
+    margin-block: 0.4rem;
+}
+
+.upload-img {
+    background-color: var(--Neutral-900);
+    border-radius: 0.8rem;
+    padding: 0.5rem;
+    color: var(--Neutral-0);
+    width: 80%;
+    border: dashed 0.1rem var(--Neutral-500);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.upload-img figcaption {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--Neutral-700);
+    border: solid 0.1rem var(--Neutral-500);
+}
+
+.upload-img figcaption img,
+.upload_Avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upload-img p {
+    margin: 0;
+    padding: 0;
+    color: var(--Neutral-500);
+}
+
+.upload {
+    opacity: 0;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.upload.hid {
+    display: none;
+}
+
+.upload-img:hover {
+    background-color: var(--Neutral-700);
+}
+
+.upload-img:focus {
+    outline: solid 0.1rem var(--Neutral-500);
+    box-shadow: 0 0 0 0.2rem var(--Neutral-900), 0 0 0 0.3rem var(--Neutral-500);
+}
+
+.change-or-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+.change_upload {
+    background-color: var(--Neutral-500);
+    border-radius: 0.3rem;
+    color: var(--Neutral-0);
+    font-weight: bold;
+    border: solid 0.1rem var(--Neutral-300);
+    width: 30%;
+    padding: 0.3rem;
+    margin-block: 0.2rem;
+    font-size: small;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+.change_upload:hover {
+    text-decoration: underline;
+}
+
+label.red {
+    color: var(--Gradient-text);
+    filter: drop-shadow(0 0 5px var(--Gradient-text));
+}
+
+.form-finished {
+    width: 35%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    flex: 1;
+
+}
+
+.form-finished h1 {
+    font-size: 3rem;
+    margin-block-end: 2rem;
+}
+
+.form-finished b {
+    color: var(--Orange-500);
+    background-image: linear-gradient(135deg, var(--Orange-500) 0%, var(--Neutral-0) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-finished pre {
+    color: var(--Neutral-300);
+    white-space: normal;
+    width: 70%;
+    margin-block-end: 2rem;
+
+}
+
+.ticket {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("./assets/images/pattern-ticket.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    overflow: hidden;
+    min-height: 40vh;
+    box-sizing: border-box;
+}
+
+
+.upload_Avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--Neutral-700);
+    border: solid 0.1rem var(--Neutral-500);
+    margin-inline-end: auto;
+}
+
+.personal-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-inline-end: auto;
+}
+
+.personal-info div {
+    margin-inline-end: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.personal-info h3 {
+    margin-block: 0.1rem;
+    font-size: xx-large;
+}
+
+.github_user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 0.1rem;
+
+}
+
+.logo2 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.logo2 p {
+    margin-inline-start: 15%;
+}
+
+.ticket-code {
+    position: absolute;
+    transform: rotate(270deg);
+    font-size: xx-large;
+    right: -2rem;
+    color: var(--Neutral-300);
+    top: 40%;
+}
+
+footer {
+    font-size: 0.6875rem;
+    text-align: center;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+}
+
+footer a {
+    color: var(--Gradient-text);
+    filter: drop-shadow(0 0 5px var(--Gradient-text));
+    z-index: 3;
+}
+
+@media (max-width:48rem) {
+    body {
+        background-image: url("./assets/images/background-mobile.png");
+        min-height: 100vh;
+    }
+
+    header,
+    main,
+    .form-finished {
+        width: 90%;
+    }
+
+    .squiggly_line_bottom_desktop {
+        display: none;
+    }
+
+    .line_bottom_mobile {
+        display: block;
+        bottom: 0;
+    }
+
+    .pattern_lines {
+        top: -20rem;
+    }
+
+    .pattern_circle1,
+    .pattern_circle2 {
+        width: 10em;
+        height: auto;
+    }
+
+    .squiggly_line_top,
+    .line_bottom_mobile {
+        width: 25em;
+        height: auto;
+    }
+
+    .form-finished h1 {
+        font-size: 2rem;
+    }
+
+    .personal-info h3 {
+        font-size: large;
+    }
+
+    .ticket-code {
+        font-size: large;
+        right: -1rem;
+        top: 37.5%;
+    }
+
+    .upload_Avatar {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .ticket {
+        min-height: 25dvh;
+    }
+}
+
+@media (48rem <=width <=65rem) {
+    body {
+        background-image: url("./assets/images/background-tablet.png");
+        min-height: 100vh;
+    }
+
+    header,
+    main,
+    .form-finished {
+        width: 50%;
+    }
+
+    .pattern_lines {
+        top: -20rem;
+    }
+
+    .ticket {
+        min-height: 25dvh;
+    }
+}
